@@ -1,0 +1,235 @@
+@server = http://localhost:4004
+
+
+### Characters
+# @name Characters_GET
+GET {{server}}/odata/v4/player/Characters
+
+
+
+### Characters
+# @name Characters_POST
+POST {{server}}/odata/v4/player/Characters
+Content-Type: application/json
+
+{
+  "id": 22477081,
+  "name": "name-22477081",
+  "description": "description-22477081",
+  "level": 77,
+  "hp": 48
+}
+
+
+### Characters
+# @name Characters_PATCH
+PATCH {{server}}/odata/v4/player/Characters/22477081
+Content-Type: application/json
+
+{
+  "id": 22477081,
+  "name": "name-22477081",
+  "description": "description-22477081",
+  "level": 77,
+  "hp": 48
+}
+
+
+### Characters
+# @name Characters_DELETE
+DELETE {{server}}/odata/v4/player/Characters/22477081
+Content-Type: application/json
+
+
+### Weapons
+# @name Weapons_GET
+GET {{server}}/odata/v4/player/Weapons
+
+
+
+### Weapons
+# @name Weapons_POST
+POST {{server}}/odata/v4/player/Weapons
+Content-Type: application/json
+
+{
+  "id": 26685240,
+  "name": "name-26685240",
+  "description": "description-26685240",
+  "level": 20,
+  "attack": 51
+}
+
+
+### Weapons
+# @name Weapons_PATCH
+PATCH {{server}}/odata/v4/player/Weapons/26685240
+Content-Type: application/json
+
+{
+  "id": 26685240,
+  "name": "name-26685240",
+  "description": "description-26685240",
+  "level": 20,
+  "attack": 51
+}
+
+
+### Weapons
+# @name Weapons_DELETE
+DELETE {{server}}/odata/v4/player/Weapons/26685240
+Content-Type: application/json
+
+
+### Artifacts
+# @name Artifacts_GET
+GET {{server}}/odata/v4/player/Artifacts
+
+
+
+### Artifacts
+# @name Artifacts_POST
+POST {{server}}/odata/v4/player/Artifacts
+Content-Type: application/json
+
+{
+  "id": 25112016,
+  "name": "name-25112016",
+  "description": "description-25112016",
+  "attack": 60,
+  "defence": 73,
+  "hp": 44
+}
+
+
+### Artifacts
+# @name Artifacts_PATCH
+PATCH {{server}}/odata/v4/player/Artifacts/25112016
+Content-Type: application/json
+
+{
+  "id": 25112016,
+  "name": "name-25112016",
+  "description": "description-25112016",
+  "attack": 60,
+  "defence": 73,
+  "hp": 44
+}
+
+
+### Artifacts
+# @name Artifacts_DELETE
+DELETE {{server}}/odata/v4/player/Artifacts/25112016
+Content-Type: application/json
+
+
+### Functions
+# @name Functions_GET
+GET {{server}}/odata/v4/player/Functions
+
+
+
+### Functions
+# @name Functions_POST
+POST {{server}}/odata/v4/player/Functions
+Content-Type: application/json
+
+{
+  "fnCode": "Functions-2246666",
+  "srvCode": "Functions-2246666",
+  "fnName": "fnName-2246666",
+  "srvName": "srvName-2246666",
+  "fnDesc": "fnDesc-2246666",
+  "srvDesc": "srvDesc-2246666"
+}
+
+
+### Functions
+# @name Functions_PATCH
+PATCH {{server}}/odata/v4/player/Functions(fnCode='Functions-2246666',srvCode='Functions-2246666')
+Content-Type: application/json
+
+{
+  "fnCode": "Functions-2246666",
+  "srvCode": "Functions-2246666",
+  "fnName": "fnName-2246666",
+  "srvName": "srvName-2246666",
+  "fnDesc": "fnDesc-2246666",
+  "srvDesc": "srvDesc-2246666"
+}
+
+
+### Functions
+# @name Functions_DELETE
+DELETE {{server}}/odata/v4/player/Functions(fnCode='Functions-2246666',srvCode='Functions-2246666')
+Content-Type: application/json
+
+
+### Jobs
+# @name Jobs_GET
+GET {{server}}/odata/v4/player/Jobs
+
+
+
+### Jobs
+# @name Jobs_POST
+POST {{server}}/odata/v4/player/Jobs
+Content-Type: application/json
+
+{
+  "ID": "21895652-4ea8-499e-ae3b-6526fed077aa",
+  "jobId": "jobId-21895652",
+  "name": "name-21895652",
+  "description": "description-21895652",
+  "dayOfWeek": "95652",
+  "month": "95652",
+  "dayOfMonth": "95652",
+  "hour": "95652",
+  "minute": "95652",
+  "second": "95652",
+  "startTime": "2020-03-30T00:00:00.000Z",
+  "endTime": "2013-10-31T00:00:00.000Z",
+  "active": "2",
+  "status": "status-21895652",
+  "fnCode": "fnCode-21895652",
+  "srvCode": "srvCode-21895652",
+  "createdAt": "2017-09-20T00:00:00.000Z",
+  "createdBy": "createdBy.d1ask@example.org",
+  "modifiedAt": "2021-01-22T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.d1ask@example.net"
+}
+
+
+### Jobs
+# @name Jobs_PATCH
+PATCH {{server}}/odata/v4/player/Jobs/21895652-4ea8-499e-ae3b-6526fed077aa
+Content-Type: application/json
+
+{
+  "ID": "21895652-4ea8-499e-ae3b-6526fed077aa",
+  "jobId": "jobId-21895652",
+  "name": "name-21895652",
+  "description": "description-21895652",
+  "dayOfWeek": "95652",
+  "month": "95652",
+  "dayOfMonth": "95652",
+  "hour": "95652",
+  "minute": "95652",
+  "second": "95652",
+  "startTime": "2020-03-30T00:00:00.000Z",
+  "endTime": "2013-10-31T00:00:00.000Z",
+  "active": "2",
+  "status": "status-21895652",
+  "fnCode": "fnCode-21895652",
+  "srvCode": "srvCode-21895652",
+  "createdAt": "2017-09-20T00:00:00.000Z",
+  "createdBy": "createdBy.d1ask@example.org",
+  "modifiedAt": "2021-01-22T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.d1ask@example.net"
+}
+
+
+### Jobs
+# @name Jobs_DELETE
+DELETE {{server}}/odata/v4/player/Jobs/21895652-4ea8-499e-ae3b-6526fed077aa
+Content-Type: application/json
