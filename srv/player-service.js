@@ -1,12 +1,9 @@
-// get libraries/modules
-const cds = require('@sap/cds')
+const cds = require('@sap/cds');
 const Bree =require('bree');
 const Graceful = require('@ladjs/graceful');
-const { parentPort } = require('worker_threads');
-// const lib_dms = require('./DMS_LIB/BTP_DMS_LIB')
-module.exports = cds.service.impl(function (srv) {
+module.exports = cds.service.impl(async function (srv) {    
     this.on('implementJob',async (req)=>{   
-        try{  
+        try{      
             const bree = new Bree({     
                 jobs:[
                     {
@@ -16,7 +13,8 @@ module.exports = cds.service.impl(function (srv) {
                         worker: {
                             workerData: {
                                 fnCode: 'getWinningPercentage',
-                                srvCode: 'playerService'    
+                                srvCode: 'playerService',
+                                useWorkerThreads: false  
                             }
                         }
                     },
@@ -63,8 +61,8 @@ module.exports = cds.service.impl(function (srv) {
             
 
         }catch(error){       
-            var sType=error.code?"Procedure":"Node Js";    
-            var iErrorCode=error.code??500;
+            let sType=error.code?"Procedure":"Node Js";    
+            let iErrorCode=error.code??500;
             req.error({ code:iErrorCode, message:  error.message ? error.message : error });
         }
     })  
@@ -75,8 +73,8 @@ module.exports = cds.service.impl(function (srv) {
             console.log('100% Winning')
             return "100% Winning"   
         }catch(error){   
-            var sType=error.code?"Procedure":"Node Js";    
-            var iErrorCode=error.code??500;
+            let sType=error.code?"Procedure":"Node Js";    
+            let iErrorCode=error.code??500;
             req.error({ code:iErrorCode, message:  error.message ? error.message : error });
         }
     })   
@@ -86,8 +84,8 @@ module.exports = cds.service.impl(function (srv) {
             console.log('100% Losing')       
             return "100% Losing"   
         }catch(error){   
-            var sType=error.code?"Procedure":"Node Js";    
-            var iErrorCode=error.code??500;
+            let sType=error.code?"Procedure":"Node Js";    
+            let iErrorCode=error.code??500;
             req.error({ code:iErrorCode, message:  error.message ? error.message : error });
         }
     })   
